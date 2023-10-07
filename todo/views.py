@@ -19,8 +19,8 @@ def add_item(request):
         if form.is_valid():
             form.save()
             return redirect('get_todo_list')
-        form = ItemForm()
-        context = {
-            'form': form
-        }
+    form = ItemForm()
+    context = {
+        'form': form
+    }
     return render(request, 'todo/add_item.html', context)
